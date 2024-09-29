@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/styles/style.css">
+  <script src="/js/main.js" defer></script>
   <title>E-commerce product page</title>
 
 </head>
@@ -12,23 +13,25 @@
   <header class="header">
     <section class="container-head-first">
       <div class="dividers">
-        <div class="container_menu">
-          <img src="/images/icon-menu.svg" alt="menu-image">
+        <div class="container_menu" id="menu-img">
+          <img src="/images/icon-menu.svg" alt="menu-image" id="imageMenu">
         </div>
         <div class="container_logo">
           <img src="/images/logo.svg" alt="logo-image">
         </div>
       </div>
-        <div class="container-car"></div>
+        <div class="container-car" id="cart-image">
           <img src="/images/icon-cart.svg" alt="cart">
         </div>
         <div class="container-profile">
           <img src="/images/image-avatar.png" alt="profile">
         </div>
     </section>
-    <section class="container-head-second">
+
+
+    <section class="container-head-second" id="modal-menu">
       <div class="submenu">
-        <div class="container-close-x">
+        <div class="container-close-x" id="close-modal-menu">
           <img src="/images/icon-close.svg" alt="icon-close">
         </div>
         <ul class="lis-option">
@@ -40,16 +43,29 @@
         </ul>
       </div>
     </section>
-    <section class="container-cart-preview">
+
+
+    <section class="container-cart-preview" id="modal-preview">
       <h3>Cart</h3>
-      <div class="container-product">
-        <div><img src="/images/image-product-4-thumbnail.jpg" alt="product"></div>
-        <div><span class="detail-product">$ 125.00 x 3 $375.00</span></div>
-        <div class="container-trash"><img src="/images/icon-delete.svg" alt="delete"></div>
-        <button class="checkout">Checkout</button>
+      <div class="container-product-cart-preview">
+        <div class="container-image-preview">
+          <img src="/images/image-product-1-thumbnail.jpg" alt="product">
+        </div>
+        <div class="preview-information">
+          <span>Fall Limited Edition Sneakers $ 125.00 x </span>
+          <span>3</span>
+          <span class="detail-product">$375.00</span>
+        </div>
+        <div class="container-trash">
+          <img src="/images/icon-delete.svg" alt="delete">
+        </div>
       </div>
+      <button class="checkout">Checkout</button>
     </section>
+
+
   </header>
+
   <main>
     <div class="container-main-image">
       <div class="previous">
@@ -65,16 +81,25 @@
       <h1>Fall Limited Edition Sneakers</h1>
       <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer</p>
       <div class="container-price">
-        <h1>$ 125.00</h1>
-        <span>50%</span>
-        <span>$250</span>
+        <div class="subdivision">
+          <h1>$125.00</h1>
+          <span>50%</span>
+        </div>
+        <span>$250.00</span>
       </div>
-      <div>
-        <img src="/images/icon-minus.svg" alt="minus">
+      <div class="btn-add-minus">
+        <div>
+          <img src="/images/icon-minus.svg" alt="minus">
+        </div>
         <span>0</span>
-        <img src="/images/icon-plus.svg" alt="icon-plus">
+        <div>
+          <img src="/images/icon-plus.svg" alt="icon-plus">
+        </div>
       </div>
-      <button class="add-cart"> <img src="/images/icon-cart.svg" alt="cart"> Add to cart</button>
+      <div class="add-cart">
+        <img src="/images/icon-cart.svg" alt="cart">
+        <button class="">Add to cart</button>
+      </div>
     </section>
   </main>
 

@@ -1,20 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Kumbh Sans';
+}
+/* the last color has this specifications (with 75% opacity for light box background):  */
+:root{
+    ---Orange: hsl(26, 100%, 55%);
+    ---PaleOrange: hsl(25, 100%, 94%);
+    ----VeryDarkBlue: hsl(220, 13%, 13%);
+    ---DarkGrayishBlue: hsl(217, 9%, 45%);
+    ---GrayishBlue: hsl(220, 14%, 75%);
+    ---LightGrayishBlue: hsl(223, 64%, 98%);
+    ---White: hsl(0, 0%, 100%);
+    ---Black: hsl(0, 0%, 70%) 
 }
 
 /* This is for the sub menu, modal */
 
 .container-head-second{
     display: none;
+    position: absolute;
+    background-color: rgba(34, 33, 33, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
+
+.submenu{
+    width: 65%;
+    background-color: var(---White);
+    border: none;
+    padding: 1.5rem 1.5rem;
+}
+
+.lis-option{
+    list-style: none;
+    margin-top: 2.5rem;
+}
+
+.lis-option li{
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: .6rem 0;
+}
+
+
 
 /* This is for the previous cart */
 
 .container-cart-preview{
     display: none;  
+    flex-direction: column;
+    position: absolute;
+    width: 95%;
+    height: 15rem;
+    top: 5.2rem;
+    left: 11px;
+    z-index: 1;
+    border-radius: 10px;
+    background-color: var(---White);
+    color: var(---DarkGrayishBlue);
 }
+.container-cart-preview>h3{
+    padding: 1.3rem 1rem;
+    border-bottom: 1px solid var(---LightGrayishBlue);
+    color: black;
+}
+
+.container-product-cart-preview{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 5.5rem;
+}
+
+.container-image-preview{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+}
+
+.preview-information{
+    width: 14rem;
+    line-height: 1.5rem;
+    color: var(---DarkGrayishBlue);
+}
+
+.detail-product{
+    font-weight: 900;
+}
+
+.container-image-preview>img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.checkout{
+    background-color: var(---Orange);
+    border: none;
+    border-radius: 8px;
+    height: 3.2rem;
+    color: black;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 90%;
+}
+
 
 /* This is the header for the mobile view */
 
@@ -112,4 +211,92 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 1.5rem 1.5rem 0;
 }
+
+.container-product>h3{
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding-bottom: .6rem;
+    color: var(---DarkGrayishBlue);
+}
+
+.container-product >h1{
+    width: 90%;
+    font-weight: 700;
+    font-size: 2rem;
+    padding-bottom: .7rem;
+}
+
+.container-product >p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+    color: var(---DarkGrayishBlue);
+}
+
+.container-price{
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-price > span{
+    text-decoration: line-through;
+    color: var(---DarkGrayishBlue);
+    font-size: 17px;
+    font-weight: 800;
+}
+.subdivision{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.subdivision>h1{
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.subdivision>span{
+    color: var(---White);
+    background-color: black;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: .4rem .8rem;
+}
+
+.btn-add-minus{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 1.5rem;
+    background-color: var(---LightGrayishBlue);
+    border-radius: 13px;
+    border: none;
+    margin: .8rem 0;
+}
+
+.add-cart{
+    background-color: var(---Orange);
+    border: none;
+    border-radius: 8px;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    color: black;
+}
+
+.add-cart> button{
+    color: black;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 17px;
+}
+
