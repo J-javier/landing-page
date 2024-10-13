@@ -20,12 +20,15 @@
           <img src="/images/logo.svg" alt="logo-image">
         </div>
       </div>
+      <div class="dividerTwo">
         <div class="container-car" id="cart-image">
           <img src="/images/icon-cart.svg" alt="cart">
+          <span class="cart-number" id="popUp-cart">3</span>
         </div>
         <div class="container-profile">
           <img src="/images/image-avatar.png" alt="profile">
         </div>
+      </div>
     </section>
 
 
@@ -68,14 +71,23 @@
 
   <main>
     <div class="container-main-image">
-      <div class="previous">
+      <div class="previous" id="previous-btn">
         <img src="/images/icon-previous.svg" alt="previous">
       </div>
-      <img src="/images/image-product-1.jpg" alt="product">
-      <div class="next">
+      
+      <img src="/images/image-product-1.jpg" alt="product" id="main-img">
+
+      <div class="next" id="next-btn">
         <img src="/images/icon-next.svg" alt="next">
       </div>
+      <div class="thumbnail-images">
+        <img src="./images/image-product-1-thumbnail.jpg" alt='image 1'>
+        <img src="./images/image-product-2-thumbnail.jpg" alt='image 2'>
+        <img src="./images/image-product-3-thumbnail.jpg" alt='image 3'>
+        <img src="./images/image-product-4-thumbnail.jpg" alt='image 4'>
+      </div>
     </div>
+
     <section class="container-product">
       <h3>SNEAKER COMPANY</h3>
       <h1>Fall Limited Edition Sneakers</h1>
@@ -88,17 +100,19 @@
         <span>$250.00</span>
       </div>
       <div class="btn-add-minus">
-        <div>
-          <img src="/images/icon-minus.svg" alt="minus">
+        <div id="remove-shoe">
+          <img src="/images/icon-minus.svg" alt="minus" >
         </div>
-        <span>0</span>
-        <div>
-          <img src="/images/icon-plus.svg" alt="icon-plus">
+
+        <span id="total-shoes">0</span>
+        
+        <div id="add-shoe">
+          <img src="/images/icon-plus.svg" alt="icon-plus" >
         </div>
       </div>
       <div class="add-cart">
         <img src="/images/icon-cart.svg" alt="cart">
-        <button class="">Add to cart</button>
+        <button class="" id="btn-add-cart">Add to cart</button>
       </div>
     </section>
   </main>
